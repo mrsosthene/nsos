@@ -1,0 +1,133 @@
+/* Styles de base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3d3c3c;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Conteneur principal */
+.articles-container {
+    display: flex;
+    overflow-x: auto; /* Défilement horizontal */
+    gap: 20px;
+    padding: 20px;
+    scroll-behavior: smooth;
+    margin: 100px;
+    transition: transform 0.3s ease; /* Animation du conteneur */
+}
+
+/* Carte d'article */
+.article-card {
+    flex: 0 0 500px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transition fluide */
+}
+
+.article-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.article-content {
+    padding: 15px;
+    flex: 1;
+}
+
+.article-content h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.article-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.article-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+button {
+    background-color: #4d4d4e;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background-color: #242424;
+}
+
+button.delete {
+    background-color: #dc3545;
+}
+
+button.delete:hover {
+    background-color: #c82333;
+}
+
+/* Styles pour la boîte de dialogue */
+.dialog-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1000;
+}
+
+.dialog-box button {
+    background-color: #353333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dialog-box button:hover {
+    background-color: #000000;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
